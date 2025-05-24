@@ -14,8 +14,8 @@ export const Header = () => {
         </div>
         <nav className="hidden md:flex space-x-8">
           <a href="#services" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Services</a>
+          <a href="#packages" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Packages</a>
           <a href="#features" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Features</a>
-          <a href="#pricing" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Pricing</a>
           <a href="#contact" className="text-gray-700 hover:text-blue-600 transition-colors font-medium">Contact</a>
         </nav>
         <Button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold">
