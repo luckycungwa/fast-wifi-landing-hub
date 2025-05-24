@@ -1,149 +1,161 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ArrowRight, Gamepad2, Tv, Briefcase, Home } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Check, ArrowRight, Wifi, Zap, Shield, Users, Gamepad2, Monitor } from "lucide-react";
 
 export const Packages = () => {
-  const packages = [
+  const features = [
     {
-      name: "Starter",
-      speed: "20/10 Mbps",
-      price: "399",
-      description: "Perfect for basic browsing and light streaming",
-      icon: Home,
-      useCase: "1-2 devices, browsing, email, light social media",
-      features: [
-        "Unlimited data",
-        "Standard support",
-        "Free installation",
-        "No contracts"
-      ],
-      recommended: false,
-      bestFor: "Light users"
+      title: "Ultra-Fast Speeds",
+      description: "Lightning-fast fiber connections up to 100 Mbps",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      icon: Zap,
+      benefits: ["Stream 4K without buffering", "Download large files instantly", "Multiple devices connected"],
+      bestFor: "Heavy internet users, content creators",
+      availableIn: ["Family", "Gamer", "Pro"]
     },
     {
-      name: "Family",
-      speed: "40/40 Mbps", 
-      price: "480",
-      description: "Great for families with multiple devices",
-      icon: Tv,
-      useCase: "3-5 devices, HD streaming, video calls, smart home",
-      features: [
-        "Unlimited data",
-        "Priority support", 
-        "Free installation",
-        "Parental controls",
-        "No contracts"
-      ],
-      recommended: true,
-      bestFor: "Most families"
-    },
-    {
-      name: "Gamer",
-      speed: "50/50 Mbps",
-      price: "620", 
-      description: "Optimized for gaming and content creation",
+      title: "Gaming Optimization", 
+      description: "Low latency network built for competitive gaming",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
       icon: Gamepad2,
-      useCase: "Gaming, streaming, uploading content, low latency",
-      features: [
-        "Unlimited data",
-        "Gaming optimization",
-        "24/7 support",
-        "Low latency guarantee",
-        "No contracts"
-      ],
-      recommended: false,
-      bestFor: "Gamers & creators"
+      benefits: ["Sub-10ms latency", "Gaming traffic prioritization", "Dedicated gaming servers"],
+      bestFor: "Gamers, esports enthusiasts",
+      availableIn: ["Gamer", "Pro"]
     },
     {
-      name: "Pro",
-      speed: "100/50 Mbps",
-      price: "720",
-      description: "Maximum performance for power users",
-      icon: Briefcase,
-      useCase: "Heavy business use, multiple 4K streams, large files",
-      features: [
-        "Unlimited data", 
-        "Premium support",
-        "Business-grade SLA",
-        "Dedicated support line",
-        "No contracts"
-      ],
-      recommended: false,
-      bestFor: "Power users & business"
+      title: "Business Reliability",
+      description: "99.9% uptime with enterprise-grade support",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      icon: Shield,
+      benefits: ["24/7 priority support", "SLA guarantees", "Dedicated support line"],
+      bestFor: "Remote workers, small businesses",
+      availableIn: ["Pro"]
+    },
+    {
+      title: "Smart Home Ready",
+      description: "Connect all your devices seamlessly",
+      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80",
+      icon: Wifi,
+      benefits: ["Support 50+ devices", "Smart home optimization", "Parental controls"],
+      bestFor: "Modern families, tech enthusiasts",
+      availableIn: ["Family", "Gamer", "Pro"]
+    },
+    {
+      title: "Streaming Paradise",
+      description: "Multiple 4K streams without compromise",
+      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+      icon: Monitor,
+      benefits: ["Multiple 4K streams", "Netflix, YouTube optimized", "Zero buffering guarantee"],
+      bestFor: "Entertainment lovers, big families",
+      availableIn: ["Family", "Gamer", "Pro"]
+    },
+    {
+      title: "No Contracts Freedom",
+      description: "Cancel anytime, no hidden fees or commitments",
+      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80",
+      icon: Users,
+      benefits: ["Month-to-month billing", "No cancellation fees", "30-day money back"],
+      bestFor: "Everyone who values flexibility",
+      availableIn: ["Starter", "Family", "Gamer", "Pro"]
     }
   ];
 
+  const packages = [
+    { name: "Starter", speed: "20/10 Mbps", price: "399", color: "gray" },
+    { name: "Family", speed: "40/40 Mbps", price: "480", color: "blue" },
+    { name: "Gamer", speed: "50/50 Mbps", price: "620", color: "purple" },
+    { name: "Pro", speed: "100/50 Mbps", price: "720", color: "green" }
+  ];
+
+  const getPackageColor = (packageName: string) => {
+    const pkg = packages.find(p => p.name === packageName);
+    switch(pkg?.color) {
+      case "blue": return "bg-blue-100 text-blue-800 border-blue-200";
+      case "purple": return "bg-purple-100 text-purple-800 border-purple-200";
+      case "green": return "bg-green-100 text-green-800 border-green-200";
+      default: return "bg-gray-100 text-gray-800 border-gray-200";
+    }
+  };
+
   return (
-    <section id="packages" className="py-20 bg-gray-50">
+    <section id="packages" className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Choose your perfect package
+            Powerful features for every need
           </h2>
           <p className="text-xl text-gray-600">
-            Find the right speed and features for your lifestyle. All plans include unlimited data and no contracts.
+            Choose the perfect package based on how you use the internet. All plans include unlimited data and no contracts.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {packages.map((pkg, index) => (
-            <Card key={index} className={`relative border-2 ${pkg.recommended ? 'border-blue-600 shadow-lg' : 'border-gray-200'} hover:shadow-lg transition-shadow bg-white`}>
-              {pkg.recommended && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Most Popular
-                  </span>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+          {features.map((feature, index) => (
+            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow bg-white">
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={feature.image} 
+                  alt={feature.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                  <div className="bg-white p-3 rounded-full">
+                    <feature.icon className="h-6 w-6 text-gray-900" />
+                  </div>
                 </div>
-              )}
+              </div>
               
               <CardHeader className="pb-4">
-                <div className="flex items-center space-x-3 mb-2">
-                  <div className={`w-10 h-10 ${pkg.recommended ? 'bg-blue-100' : 'bg-gray-100'} rounded-lg flex items-center justify-center`}>
-                    <pkg.icon className={`h-5 w-5 ${pkg.recommended ? 'text-blue-600' : 'text-gray-600'}`} />
-                  </div>
-                  <div>
-                    <CardTitle className="text-lg font-bold text-gray-900">{pkg.name}</CardTitle>
-                    <div className="text-xs font-medium text-blue-600">{pkg.bestFor}</div>
-                  </div>
-                </div>
+                <CardTitle className="text-xl font-bold text-gray-900 mb-2">{feature.title}</CardTitle>
+                <p className="text-gray-600 text-sm mb-4">{feature.description}</p>
                 
-                <div className="flex items-baseline mb-2">
-                  <span className="text-2xl font-bold text-gray-900">R{pkg.price}</span>
-                  <span className="text-gray-600 ml-1 text-sm">/month</span>
-                </div>
-                
-                <div className="text-sm font-semibold text-gray-700 mb-2">{pkg.speed}</div>
-                
-                <CardDescription className="text-gray-600 text-sm mb-3">
-                  {pkg.description}
-                </CardDescription>
-                
-                <div className="bg-gray-50 p-3 rounded-lg mb-4">
-                  <div className="text-xs font-medium text-gray-700 mb-1">Best for:</div>
-                  <div className="text-xs text-gray-600">{pkg.useCase}</div>
+                <div className="mb-4">
+                  <div className="text-xs font-semibold text-gray-700 mb-2">Perfect for:</div>
+                  <div className="text-xs text-gray-600 bg-gray-50 p-2 rounded">{feature.bestFor}</div>
                 </div>
               </CardHeader>
               
               <CardContent className="space-y-4">
                 <ul className="space-y-2">
-                  {pkg.features.map((feature, idx) => (
+                  {feature.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-center text-sm">
                       <Check className="h-4 w-4 text-green-600 mr-2 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700">{benefit}</span>
                     </li>
                   ))}
                 </ul>
                 
-                <Button 
-                  className={`w-full ${pkg.recommended ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-900 hover:bg-gray-800'} text-white font-semibold`}
-                >
-                  Choose Plan
-                  <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
+                <div>
+                  <div className="text-xs font-semibold text-gray-700 mb-2">Available in:</div>
+                  <div className="flex flex-wrap gap-1">
+                    {feature.availableIn.map((pkg, idx) => (
+                      <span key={idx} className={`text-xs px-2 py-1 rounded-full border ${getPackageColor(pkg)}`}>
+                        {pkg}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        <div className="bg-gray-50 rounded-2xl p-8 max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Choose your package</h3>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {packages.map((pkg, index) => (
+              <div key={index} className="bg-white rounded-lg p-6 text-center border-2 border-gray-100 hover:border-gray-200 transition-colors">
+                <div className="text-lg font-bold text-gray-900 mb-1">{pkg.name}</div>
+                <div className="text-sm text-gray-600 mb-2">{pkg.speed}</div>
+                <div className="text-2xl font-bold text-gray-900 mb-4">R{pkg.price}<span className="text-sm font-normal text-gray-600">/mo</span></div>
+                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+                  Choose Plan
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </div>
+            ))}
+          </div>
         </div>
         
         <div className="text-center mt-12">
