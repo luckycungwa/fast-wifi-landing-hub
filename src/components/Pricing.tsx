@@ -16,7 +16,7 @@ export const Pricing = () => {
         "Free installation",
         "No contracts"
       ],
-      popular: false
+      popular: true
     },
     {
       name: "Family",
@@ -30,7 +30,7 @@ export const Pricing = () => {
         "Parental controls",
         "No contracts"
       ],
-      popular: true
+      popular: false
     },
     {
       name: "Gamer",
@@ -63,7 +63,7 @@ export const Pricing = () => {
   ];
 
   return (
-    <section id="pricing" className="py-20 bg-white">
+    <section id="pricing" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -74,9 +74,9 @@ export const Pricing = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"  >
           {plans.map((plan, index) => (
-            <Card key={index} className={`relative border-2 ${plan.popular ? 'border-blue-600 shadow-lg' : 'border-gray-200'} hover:shadow-lg transition-shadow bg-white`}>
+            <Card key={index} className={`relative border-2 ${plan.popular ? 'border-blue-600 shadow-lg' : 'border-gray-200'} hover:shadow-lg transition-shadow bg-white`} data-aos="slide-up" data-aos-duration="600" data-aos-once="true" data-aos-delay={`${index * 100}`}>
               {plan.popular && (
                 <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
@@ -109,8 +109,9 @@ export const Pricing = () => {
                 
                 <Button 
                   className={`w-full ${plan.popular ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-900 hover:bg-gray-800'} text-white font-semibold`}
+                  onClick={() => window.location.href = "#contact"}
                 >
-                  Start Free Trial
+                Get Started
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </CardContent>

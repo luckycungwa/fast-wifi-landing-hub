@@ -8,7 +8,7 @@ export const Packages = () => {
     {
       title: "Ultra-Fast Speeds",
       description: "Lightning-fast fiber connections up to 100 Mbps",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1742869028501-e041a79b260f?q=80&w=2127&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: Zap,
       benefits: ["Stream 4K without buffering", "Download large files instantly", "Multiple devices connected"],
       bestFor: "Heavy internet users, content creators",
@@ -17,7 +17,7 @@ export const Packages = () => {
     {
       title: "Gaming Optimization", 
       description: "Low latency network built for competitive gaming",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1593305841991-05c297ba4575?q=80&w=1957&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: Gamepad2,
       benefits: ["Sub-10ms latency", "Gaming traffic prioritization", "Dedicated gaming servers"],
       bestFor: "Gamers, esports enthusiasts",
@@ -26,7 +26,7 @@ export const Packages = () => {
     {
       title: "Business Reliability",
       description: "99.9% uptime with enterprise-grade support",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1668184162895-3e6074df7c87?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: Shield,
       benefits: ["24/7 priority support", "SLA guarantees", "Dedicated support line"],
       bestFor: "Remote workers, small businesses",
@@ -35,7 +35,7 @@ export const Packages = () => {
     {
       title: "Smart Home Ready",
       description: "Connect all your devices seamlessly",
-      image: "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1702390796625-6dd9b46b1c0b?q=80&w=1960&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: Wifi,
       benefits: ["Support 50+ devices", "Smart home optimization", "Parental controls"],
       bestFor: "Modern families, tech enthusiasts",
@@ -44,7 +44,7 @@ export const Packages = () => {
     {
       title: "Streaming Paradise",
       description: "Multiple 4K streams without compromise",
-      image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1646861039459-fd9e3aabf3fb?q=80&w=1926&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       icon: Monitor,
       benefits: ["Multiple 4K streams", "Netflix, YouTube optimized", "Zero buffering guarantee"],
       bestFor: "Entertainment lovers, big families",
@@ -53,7 +53,7 @@ export const Packages = () => {
     {
       title: "No Contracts Freedom",
       description: "Cancel anytime, no hidden fees or commitments",
-      image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=800&q=80",
+      image: "./no-contract.webp",
       icon: Users,
       benefits: ["Month-to-month billing", "No cancellation fees", "30-day money back"],
       bestFor: "Everyone who values flexibility",
@@ -83,16 +83,18 @@ export const Packages = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Powerful features for every need
+            Let's power your every need
           </h2>
           <p className="text-xl text-gray-600">
-            Choose the perfect package based on how you use the internet. All plans include unlimited data and no contracts.
+            Choose the perfect package. All plans include unlimited data and no contracts.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-16"  data-aos="zoom-in" data-aos-once="true">
           {features.map((feature, index) => (
-            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow bg-white">
+            <Card key={index} className="overflow-hidden border-0 shadow-lg hover:shadow-xl transition-shadow bg-white"
+              
+              >
               <div className="relative h-48 overflow-hidden">
                 <img 
                   src={feature.image} 
@@ -100,7 +102,8 @@ export const Packages = () => {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                  <div className="bg-white p-3 rounded-full">
+                  <div className="bg-white p-3 rounded-full"  data-aos="zoom-in" data-aos-duration="600" data-aos-easing="ease-in-out"
+              data-aos-once="false" data-aos-delay="60">
                     <feature.icon className="h-6 w-6 text-gray-900" />
                   </div>
                 </div>
@@ -110,10 +113,7 @@ export const Packages = () => {
                 <CardTitle className="text-xl font-bold text-gray-900 mb-2">{feature.title}</CardTitle>
                 <p className="text-gray-600 text-sm mb-4">{feature.description}</p>
                 
-                <div className="mb-4">
-                  <div className="text-xs font-semibold text-gray-700 mb-2">Perfect for:</div>
-                  <div className="text-xs text-gray-600 bg-gray-50 p-2 rounded">{feature.bestFor}</div>
-                </div>
+                
               </CardHeader>
               
               <CardContent className="space-y-4">
@@ -125,8 +125,12 @@ export const Packages = () => {
                     </li>
                   ))}
                 </ul>
+                <div className="mb-4 pt-4">
+                  <div className="text-xs font-semibold text-gray-700 mb-1">Perfect for:</div>
+                  <div className="text-xs text-gray-600  bg-gray-50 p-2 rounded">{feature.bestFor}</div>
+                </div>
                 
-                <div>
+                {/* <div>
                   <div className="text-xs font-semibold text-gray-700 mb-2">Available in:</div>
                   <div className="flex flex-wrap gap-1">
                     {feature.availableIn.map((pkg, idx) => (
@@ -135,23 +139,26 @@ export const Packages = () => {
                       </span>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </CardContent>
             </Card>
           ))}
         </div>
 
         <div className="bg-gray-50 rounded-2xl p-8 max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8">Choose your package</h3>
+          <h3 className="text-2xl font-bold text-gray-900 text-center mb-8 uppercase ">Choose your package</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {packages.map((pkg, index) => (
-              <div key={index} className="bg-white rounded-lg p-6 text-center border-2 border-gray-100 hover:border-gray-200 transition-colors">
+              <div key={index} className="bg-white/500 rounded-lg p-6 text-center border-2 border-gray-300 hover:border-blue-500 transition-colors"  data-aos="zoom-in-up"
+              data-aos-once="true"
+              data-aos-delay={200 + index * 150}>
                 <div className="text-lg font-bold text-gray-900 mb-1">{pkg.name}</div>
-                <div className="text-sm text-gray-600 mb-2">{pkg.speed}</div>
-                <div className="text-2xl font-bold text-gray-900 mb-4">R{pkg.price}<span className="text-sm font-normal text-gray-600">/mo</span></div>
-                <Button className="w-full bg-gray-900 hover:bg-gray-800 text-white">
+                <div className="text-sm text-green-600 mb-2">{pkg.speed}</div>
+                <div className="text-2xl font-bold text-blue-700 mb-4">R{pkg.price}<span className="text-sm font-normal text-gray-600">/mo</span></div>
+                {/* scroll to contact form */}
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white" onClick={() => window.location.href = "#contact"}>
                   Choose Plan
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  {/* <ArrowRight className="ml-2 h-4 w-4" /> */}
                 </Button>
               </div>
             ))}

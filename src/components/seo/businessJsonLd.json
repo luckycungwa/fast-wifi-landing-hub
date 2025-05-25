@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Multi Genius Networking",
+  "image": "https://yourdomain.com/logo.png",
+  "@id": "https://yourdomain.com",
+  "url": "https://yourdomain.com",
+  "telephone": "+27-XX-XXX-XXXX",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "123 Fiber Street",
+    "addressLocality": "Johannesburg",
+    "addressRegion": "Gauteng",
+    "postalCode": "2000",
+    "addressCountry": "ZA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -26.2041,
+    "longitude": 28.0473
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "18:00"
+  },
+  "sameAs": [
+    "https://www.facebook.com/YourPage",
+    "https://twitter.com/multigeniusnet",
+    "https://www.linkedin.com/company/multigeniusnetworking"
+  ]
+}

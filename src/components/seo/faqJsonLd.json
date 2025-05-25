@@ -1,0 +1,86 @@
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I make a payment?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can make payments easily through our secure online portal using credit/debit cards or EFT. We also offer options for recurring payments and will send reminders before your due date."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I upgrade or change my plan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Upgrading or changing your plan is simple. Just contact our support team or visit your account dashboard online to select a new plan that fits your needs. Changes take effect immediately or on your next billing cycle."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the installation process like?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our professional technician will schedule a visit to install fiber optic cables and the Optical Network Terminal (ONT) at your home. The process typically takes 2-6 hours and includes testing to ensure optimal connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there any contracts or hidden fees?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No contracts and no hidden fees. We offer month-to-month plans with transparent pricing so you can enjoy flexibility and peace of mind."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What coverage areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide nationwide fiber coverage with ongoing network expansion to bring ultra-fast internet to more homes every day."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contact customer support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our local support team is available 24/7 via phone, email, or live chat to assist you with any questions or issues."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you offer a free trial or money-back guarantee?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer a 30-day risk-free trial so you can experience our ultra-fast fiber internet with no commitment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What equipment do I need for fiber internet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We provide all necessary equipment including the Optical Network Terminal (ONT) and a compatible Wi-Fi router. Our technician will install and configure everything during your appointment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I ensure the best Wi-Fi performance at home?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Place your Wi-Fi router in a central, open location away from interference sources. For larger homes, consider mesh Wi-Fi systems or wired connections for optimal coverage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I cancel my service anytime?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, you can cancel your service at any time without penalties. Just notify our support team and we'll assist with the process."
+      }
+    }
+  ]
+}
