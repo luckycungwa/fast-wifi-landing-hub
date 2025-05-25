@@ -62,7 +62,7 @@ export const FAQ = () => {
         {/* Left Column */}
         <div className="md:w-1/2">
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            Frequently Asked <span className="text-indigo-600">Questions</span>
+            Frequently Asked <span className="text-blue-600">Questions</span>
           </h2>
           <p className="text-gray-600 mb-6">
             learn more about our services, plans, and support options. If you have any other questions, feel free to reach out to us!
